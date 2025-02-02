@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statement</title>
+</head>
+
+<body>
+    <script>
+        //if
+        //if else
+        //else if
+        //switch
+        const x = parseInt(prompt('Enter any numeric value: '))
+        if (x % 2 == 0) {
+            document.write(`${x} is an even number.<br>`)
+        }
+        else {
+            document.write(`${x} is an odd number <br>`)
+        }
+
+        //leap year
+        const year = parseInt(prompt('Enter any year with century', 2025))
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+            document.write(`${year} is leap year.<br>`)
+        }
+        else{
+            document.write(`${year} is not leap year.<br>`)
+        }
+
+        //number divisible by both 3 and 5
+        const y=parseInt(prompt('Enter any number'))
+        if (y%3==0 && y%5==0){
+            document.write(`${y} is divisible by both 3 and 5.<br>`)
+        }
+        else if(y%3==0 && y%5!=0)
+        {
+            document.write(`${y} is divisible by 3 but not by 5`)
+        }
+        else{
+            document.write(`${y} is divisible by 5 but not by 3.`)
+        }
+     
+     
+    </script>
+</body>
+
+</html>
