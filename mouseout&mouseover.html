@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onmouseout & onmouseover</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+.container1{
+    height: 250px;
+    width: 500px;
+    margin: 50px 60px;
+}
+.container1 .img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+    </style>
+</head>
+<body>
+    <div class="container1" onmouseover="change()" onmouseout="previous()">
+        <img src="https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600" alt="Macbook">
+    </div>
+    <script>
+        const change=()=>{
+            document.querySelector('img').src="https://images.pexels.com/photos/159886/pexels-photo-159886.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        }
+        const previous=()=>{
+            document.querySelector('img').src="https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600"
+        }
+    </script>
+</body>
+</html>

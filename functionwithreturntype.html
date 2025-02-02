@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function with return Type</title>
+</head>
+<body>
+    <script>
+        //define the function
+        // function demoFunction(x,y){
+        //     const total = y/x
+        //     return total
+        // }
+
+        //define the function using arrow function
+        const demoFunction=(a,b)=>(a+b)
+        
+        //call the function
+        const num1=Number(prompt('Enter First Number'))
+        const num2=Number(prompt('Enter Second Number '))
+        const result = demoFunction(num1,num2)
+        document.write(`The output is ${result}`)
+    </script>
+</body>
+</html>

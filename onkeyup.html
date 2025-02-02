@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnKeyUp</title>
+</head>
+<body>
+    <input type="password" name="" id="pwd" onkeyup="demo()">
+    <h3 id="show"></h3>
+    <script>
+        const demo=()=>{
+            const inputValue = document.getElementById('pwd').value
+            document.querySelector('#show').innerHTML=inputValue
+        }
+    </script>
+</body>
+</html>

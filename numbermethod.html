@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Methods</title>
+</head>
+<body>
+    <script>
+        const x=234.5638910
+        //toFixed() -> to determine how many digits to be printed after decimal point
+        document.write(`${x.toFixed(2)}<br>`)
+        document.write(`${x.toFixed(3)}<br>`)
+        document.write(`${x.toFixed(4)}<br>`)
+
+        //toPrecision() -> to determine how many digits to be printed from the begining
+        const y=123456.654321
+        document.write(`${y.toPrecision(6)}<br>`)
+        
+        //toExponential() ->
+        document.write(`${y.toExponential(2)}<br>`)
+    </script>
+</body>
+</html>

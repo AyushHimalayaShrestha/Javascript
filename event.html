@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <pre>
+        onclick -> when click on the html element.
+        ondblclick -> double click on the element.
+        onload -> when a page is loaded.
+        onsubmit -> when a form is submitted.
+        onchange -> when the input field is changed.
+        onmouseover -> when a mouse moves over an element.
+        onmouseout -> when a mouse moves out from an element.
+        onkeyup -> when a key is released after press.
+        onkeydown -> when a key is down.
+    </pre>
+    <button onclick="demo()">Click to See the Date</button>
+    <h2 id="result"></h2>
+    <button ondblclick="trial()">Double Click to see </button>
+    <h1 id="test"></h1>
+    <script>
+        const demo=()=>{
+            // document.write(new Date())
+            document.getElementById('result').innerHTML=new Date()
+        }
+
+        const trial=()=>{
+            document.getElementById("test").innerHTML= new Date()
+        }
+
+    </script>
+</body>
+</html>
