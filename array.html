@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        // array -> collection of multiple data in a variable.
+        const fruits=['apple','mango','kiwi','grapes','banana','avocado','litchi']
+        document.write(`${fruits}<br>`)
+        document.write(`${fruits[3]}<br>`)
+        document.write(`${fruits[3][0]}<br>`)
+        document.write(`${fruits[6]}<br>`)
+        //count the number of element in the array
+        document.write(`${fruits.length}<br>`)
+        //pop() -> remove the last element from an array
+        fruits.pop()
+        document.write(`${fruits}<br>`)
+        //push() -> add element in the last position
+        fruits.push('watermelon')
+        document.write(`${fruits}<br>`)
+        //shift() -> removes the first element
+        fruits.shift()
+        document.write(`${fruits}<br>`)
+        //unshift() -> adds an element on first position
+        fruits.unshift('papaya')
+        document.write(`${fruits}<br>`)
+        //splice() -> 
+        fruits.splice(1,0,'orange','cherry')
+        document.write(`${fruits}<br>`)
+        //1-> index number of array
+        //0 -> number of element remove
+        fruits.splice(4,2)
+        document.write(`${fruits}<br>`)
+        //sort() -> ascending order
+        fruits.sort()
+        document.write(`${fruits}<br>`)
+        //reverse() -> reverse the array from first to last
+        fruits.reverse()
+        document.write(`${fruits}<br>`)
+
+        const numbers =[2,3,10,13,15,19,90]
+        numbers.sort(function(a,b){
+            return a-b
+        })
+        document.write(`${numbers}<br>`)
+        for(i=0;i<fruits.length; i++)
+        {
+            document.write(`${fruits[i]}<br>`)
+        }
+
+
+
+    </script>
+</body>
+</html>

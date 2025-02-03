@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For In Loop</title>
+</head>
+<body>
+    <script>
+        // for in statement loops through the properties of an object.
+        const student={
+            FirstName:'Ayush',
+            LastName:'Shrestha',
+            Age:27,
+            Height:5.8
+
+        }
+        for(let x in student)
+        {
+            document.write(`${student[x]}&nbsp`)
+        }
+        document.write(`<hr>`)
+
+        //for of statement loops through the values of an iterable object.
+        const fruits=['apple','banana','canberry','grapes']
+        for(let y of fruits)
+        {
+            document.write(`${y}&nbsp`)
+        }
+    </script>
+</body>
+</html>
