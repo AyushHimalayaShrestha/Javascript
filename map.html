@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    <script>
+        // map()-> returns the new array
+        // doesnot make any effect to original array
+        const numbers=[2,3,4,5,6,7,8]
+        const result =numbers.map(num=>num**=2)
+        document.write(`${result}<br>`)
+
+        //flatMap() -> Reduces the complexity of handling nested arrays.
+        const fnumber=[1,3,5,7,9]
+        const output=fnumber.flatMap(num2=>num2+=5)
+        document.write(`${output}<br>`)
+
+        //filter() -> returns array of data which passes a test
+        const filterData = numbers.filter(f=>f<3 && f<8)
+        document.write(`${filterData}<br>`)
+        
+        //reduce() -> returns the single value
+        const total = numbers.reduce((accumulator,currentValue)=>{
+            return (accumulator+currentValue)
+        },0)
+        document.write(`${total}<br>`)
+
+        // every() -> check if all array element passes a test
+        const test = numbers.every(num=> num>5)
+        document.write(`${test}<br>`)
+
+        // some() -> checks and returns if any one element passes a test
+        const test2 = numbers.some(num=>num>5)
+        document.write(`${test2}<br>`)
+
+        // find() -> finds the first array element that passes a test
+        const test3 = numbers.find(num=> num>4)
+        document.write(`${test3}<br>`)
+
+        // includes() -> wheather element is present or not
+        const check = numbers.includes(5)
+        document.write(`${check}<br>`)
+
+        // spread(...)
+        const fruits = ['apple','mango','banana', 'grapes']
+        const data = [...numbers,...fruits]
+        document.write(`${data}<br>`) 
+        console.log(data)
+    </script>
+</body>
+</html>
