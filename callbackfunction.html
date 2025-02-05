@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack Function</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        let cars=[
+            {brand:'Hyundai',country:'Korea'},
+            {brand:'Suzuki',country:'Japan'},
+            {brand:'Volkswagen',country:'Germany'},
+            {brand:'Mercedez Benz',country:'Germany'},
+            {brand:'Toyota',country:'Japan'}
+        ]
+        const showCars=()=>{
+            setTimeout(()=>{
+                let result=''
+                cars.forEach(info=>{
+                    result+=`<li>${info.brand} = ${info.country}</li>
+                      `
+                })
+                document.querySelector('div').innerHTML=result
+            },3000)
+        }
+
+
+        // define the function addCars()
+        const addCars=(data,callback)=>{
+            setTimeout(()=>{
+                cars.push(data)
+                callback()
+            },3000)
+        }
+       
+        
+        
+        // call the function addCars() with callback function showStudent
+        addCars({brand:'Ford',country:'America'},showCars)
+    </script>
+</body>
+</html>
