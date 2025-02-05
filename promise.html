@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        let students=[
+            {fullName:'Hari Shrestha',address:'NepalGunj'},
+            {fullName:'Ram Sharma',address:'Kavre'},
+            {fullName:'Shyam Maharjan',address:'Sindhupalchowk'}
+        ]
+        const showStudents=()=>{
+            setTimeout(()=>{
+                let output=''
+                students.forEach(desc=>{
+                    output+=`<li>${desc.fullName}
+                        <ul>
+                            <li>${desc.address}</li>
+                        </ul>
+                        </li>    `
+                })
+                document.querySelector('div').innerHTML=output
+            },3000)
+            
+        }
+        // define the function
+        const addStudent=data=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    students.push(data)
+                    const error=false
+                    if(!error){
+                        resolve()
+                    }
+                    else{
+                        reject('Error: Something went wrong.')
+                    }
+                },3000)
+            })
+        }
+
+        // call the function
+        addStudent({fullName:'Ranjit Poudel',address:'Rautahat'})
+        .then(showStudents())
+        .catch(err=>console.log(err))
+    </script>
+</body>
+</html>
