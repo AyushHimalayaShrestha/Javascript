@@ -1,57 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Async/Await</title>
 </head>
+
 <body>
     <div id="bike"></div>
     <script>
-        let Bikes=[
-            {Model:'Classic 350',Company:'Royal Enfield'},
-            {Model:'Cbr600rr',Company:'Honda'},
-            {Model:'R15', Company:'Yamaha'},
-            {Model:'Cg125', Company:'Honda'},
-            {Model:'Rx100',Company:'Yamaha'},
-            {Model:'Pulsar', Company:'Bajaj'},
-            {Model:'Meteor350',Company:'Royal Enfield'}
+        let Bikes = [
+            { Model: 'Classic 350', Company: 'Royal Enfield' },
+            { Model: 'Cbr600rr', Company: 'Honda' },
+            { Model: 'R15', Company: 'Yamaha' },
+            { Model: 'Cg125', Company: 'Honda' },
+            { Model: 'Rx100', Company: 'Yamaha' },
+            { Model: 'Pulsar', Company: 'Bajaj' },
+            { Model: 'Meteor350', Company: 'Royal Enfield' }
         ]
 
-        const showBikes=()=>{
-            setTimeout(()=>{
-                let result =''
-                Bikes.forEach(info=>{
-                    result+=`<li>${info.Model}->${info.Company}</li>`
+        const showBikes = () => {
+            setTimeout(() => {
+                let result = ''
+                Bikes.forEach(info => {
+                    result += `
+                        <li>${info.Model}</li>
+                        <ul><li>${info.Company}</li>
+                            </ul>
+                        `
                 })
-                document.querySelector(`#bike`).innerHTML=result
-            },2000)
-           
+                document.querySelector(`#bike`).innerHTML = result
+            }, 2000)
+
         }
-        
-        const addBikes=data=>{
-            return new Promise((resolve,reject)=>{
-                setTimeout(()=>{
+
+        const addBikes = data => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
                     Bikes.push(data)
-                    const error=false
-                    if(!error)
-                {
-                    resolve()
-                }
-                else{
-                    reject('Error: Something went wrong.')
-                }
-                },1000)
+                    const error = false
+                    if (!error) {
+                        resolve()
+                    }
+                    else {
+                        reject('Error: Something went wrong.')
+                    }
+                }, 1000)
             })
         }
 
-        const demoFunction=async()=>{
-            await addBikes({Model:'CRF 300 L',Company:'Honda'})
+        const demoFunction = async () => {
+            await addBikes({ Model: 'CRF 300 L', Company: 'Honda' })
             showBikes()
         }
         // call the function
         demoFunction()
-    
+
     </script>
 </body>
+
 </html>
