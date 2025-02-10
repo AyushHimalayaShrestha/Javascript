@@ -7,13 +7,13 @@ function addTask() {
     const taskList = document.getElementById('taskList');
     const li = document.createElement('li');
 
-    li.innerHTML = `${taskText} <button onclick="removeTask(this)">X</button>`;
+    li.innerText = taskText;
     taskList.appendChild(li);
 
     taskInput.value = "";
 }
 
-function removeTask(button) {
+function deleteAllTasks() {
     const taskList = document.getElementById('taskList');
-    taskList.removeChild(button.parentElement);
+    taskList.innerHTML = "";
 }
