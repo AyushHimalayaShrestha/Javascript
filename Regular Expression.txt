@@ -1,0 +1,21 @@
+ Regular Expression(Regx)
+
+  symbol used in regex
+	/.../ -> regular expression must be written in between these symbol
+	^ (cap) -> it checks from the beginning
+	$ -> it checks from the end
+	[a-z] -> it only match lowercase alphabets
+	[A-Z] -> it only match uppercase alphabets
+	[a-z A-Z] -> it matches all the alphabets
+	[0-9] -> it matches numeric values
+	[a-z 0-9] -> it matches alphanumeric value
+	for special characters use backslash( \ )
+	-> eg: \@, \$, \. etc
+	{minLength,maxLength} -> {3, 20}
+	if we need only n length characters -> {n}
+	?= -> it means position of characters can be anywhere
+	. -> it matches a single character
+	* -> it matches one or more precedence character
+
+	example: \^([A-B]{1})+([a-z])+$/
+	
