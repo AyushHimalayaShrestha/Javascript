@@ -14,3 +14,8 @@ console.log(add(5,8))
 const product =(a,b)=>a*b;
 console.log(product(15,3))
 
+// Rest Parameters
+function sum(...numbers){
+    return numbers.reduce((acc,num)=>acc+num,0);
+}
+console.log(sum(1,2,3,4,5,6))
