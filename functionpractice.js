@@ -19,3 +19,10 @@ function sum(...numbers){
     return numbers.reduce((acc,num)=>acc+num,0);
 }
 console.log(sum(1,2,3,4,5,6))
+
+// CallBack Function
+function processNumbers(arr, callback){
+    return arr.map(callback)
+}
+const squared =processNumbers([1,2,3,4,5,6,7], num => num * num)
+console.log(squared)
