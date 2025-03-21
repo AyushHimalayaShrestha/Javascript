@@ -9,3 +9,8 @@ function add(a=5, b=10){
 }
 console.log(add())
 console.log(add(5,8))
+
+// Arrow Function
+const product =(a,b)=>a*b;
+console.log(product(15,3))
+
