@@ -21,4 +21,9 @@ do{
 }
 while(k<=5);
 
-// For
+// For of Loop (Array Iteration)
+console.log('\nFor in Loop: ')
+const fruit =['Apple','Banana','Cherry','Mango','Guava']
+for(const fruits of fruit){
+    console.log(fruits);
+}
