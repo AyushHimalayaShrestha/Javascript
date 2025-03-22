@@ -5,9 +5,20 @@ for (let i=1; i<=5; i++){
 }
 
 // While Loop
-console.log('\n While loop: ');
+console.log('\nWhile loop: ');
 let j=1;
 while(j<=5){
     console.log(`Iteration: ${j}`);
     j++;
 }
+
+// Do While Loop
+console.log('\nDo While Loop: ')
+let k=1;
+do{
+    console.log(`Iteration: ${k}`)
+    k++;
+}
+while(k<=5);
+
+// For
