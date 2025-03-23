@@ -31,3 +31,17 @@ for(let i=0; i<matrix.length; i++){
         console.log(`Element at[${i}][${j}]: ${matrix[i][j]}`);
     }
 }
+
+console.log("\t");
+
+// Floyd's Triangle
+let num =1;
+let rows=5;
+for(let i=1; i<=rows; i++){
+    let row ="";
+    for(let j=1; j<=i; j++){
+        row+=num + " ";
+        num++;
+    }
+    console.log(row);
+}
